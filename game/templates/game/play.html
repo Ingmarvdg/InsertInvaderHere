@@ -1,0 +1,40 @@
+{% extends "game/base.html" %}
+{% block content%}
+{% load staticfiles %}
+    <script>
+      var invader_img_url = "{{game.invader.url}}"
+      var defender_img_url = "{{game.defender.url}}"
+      var projectile_color = "{{projectile_color}}"
+    </script>
+    <div class="header">
+      <h1> {{game.invader_name}} Invasion </h1>
+    </div>
+    <p> Share your creation with your friends on facebook, or by copying the link. <p>
+    <div class="btn-group" style="width:100%; justify-content: center;">
+      <a class="btn btn-copy" onclick="copylink()" href="#" > Copy Link </a>
+      <a class="btn btn-fb" href="https://www.facebook.com/sharer/sharer.php?app_id=1102502673291911
+      &sdk=ingmar&u=127.0.0.1:800/{{ request.get_full_path }}"
+      onclick="return !window.open(this.href, 'Facebook', 'width=640,height=580')">
+      Facebook
+      </a>
+    </div>
+    <p id="game_url"> {{ request.get_full_path }} </p>
+    <div id="gamearea">
+      <!-- Our sketch will go here! -->
+    </div>
+
+    <div id="lossview">
+      <p id="endgametext" > You failed! Refresh to try again. </p>
+    </div>
+
+    <div id="winview">
+      <p id="endgametext" > You win! You stopped the {{game.defender_name}} invasion! </p>
+      <p id='points' > points </p>
+    </div>
+
+      <script src={% static 'game/js/defender.js' %}></script>
+      <script src={% static 'game/js/invader.js' %}></script>
+      <script src={% static 'game/js/projectile.js' %}></script>
+      <script src={% static 'game/js/game.js' %}></script>
+      <script src={% static 'game/js/sketch.js' %}></script>
+{% endblock content %}

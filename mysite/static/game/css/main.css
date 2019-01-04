@@ -1,0 +1,223 @@
+html {
+  margin: 0 auto;
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+}
+
+body {
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  font-size: 62.5%;
+}
+
+/* blue: #7A9BA8;
+$lightgreen: #BEFA21;
+$white: #FFFFFF;
+$red:#F7401C;
+$darkgreen:#35777D;
+*/
+
+.col-md-8 {
+  padding-top: 100px;
+}
+
+.row {
+  text-align: center;
+}
+
+.header {
+  display: block;
+}
+
+h1 {
+  font-family: 'Press Start 2P', cursive;
+  color: #BEFA21;
+  font-size: 4.4em;
+  margin-bottom: 10px;
+}
+
+h2 {
+  font-family: 'Press Start 2P', cursive;
+  color: #7A9BA8;
+  font-size: 2.4em;
+}
+
+p {
+  font-family: 'Press Start 2P', cursive;
+  color: #35777D;
+  font-size: 1.2em;
+}
+
+table {
+ margin: 0 auto;
+ }
+
+
+.btn {
+  margin-top: 10px;
+  background: none;
+  border-width: 3px;
+  font-family: 'Press Start 2P', cursive;
+  border-radius: 0px;
+  transition-duration: 0.1s;
+}
+
+
+.btn:hover {
+  color: black;
+}
+
+.btn-main {
+  border-color: #F7401C;
+  color: #F7401C;
+}
+
+.btn-main:hover {
+  background: #F7401C;
+}
+
+.btn-donate {
+  border-color: #BEFA21;
+  color: #BEFA21;
+}
+
+.btn-donate:hover {
+  background: #BEFA21;
+}
+
+.btn-btc {
+  border-color: #f2a900;
+  color: #f2a900;
+}
+
+.btn-btc:hover {
+  background: #f2a900;
+}
+
+.btn-eth {
+  border-color: #ecf0f1;
+  color: #ecf0f1;
+}
+
+.btn-eth:hover {
+  background: #ecf0f1;
+}
+
+.btn-ppl {
+  border-color: #3b7bbf;
+  color: #3b7bbf;
+}
+
+.btn-ppl:hover {
+  background: #3b7bbf;
+}
+
+.btn-upload {
+  border-color: white;
+  color: white;
+}
+
+.btn-upload:hover {
+  background: white;
+}
+
+.btn-fb {
+  border-color: white;
+  color: white;
+}
+
+.btn-fb:hover {
+  background: white;
+}
+
+.btn-copy {
+  border-color: white;
+  color: red;
+}
+
+.btn-copy:hover {
+  background: white;
+}
+
+.game_form {
+}
+
+.gameref {
+  clear:both;
+}
+
+#gamearea {
+  background: black;
+  height: 500px;
+  width: 600px;
+  min-width: 500px;
+  max-width: 600px;
+}
+
+#lossview {
+  display:none;
+  margin-top: 150px;
+}
+
+#winview {
+  margin-top: 150px;
+  display:none;
+}
+
+#lossview p {
+  font-family: 'Press Start 2P', cursive;
+  color: #F7401C;
+  font-size: 2.4em;
+  margin-bottom: 10px;
+}
+
+#winview p {
+  font-family: 'Press Start 2P', cursive;
+  color: #BEFA21;
+  font-size: 2.4em;
+  margin-bottom: 10px;
+}
+
+.game_form {
+  margin-top: 40px;
+  font-family: 'Press Start 2P', cursive;
+  color: #35777D;
+  font-size: 2.0em;
+  text-align: center;
+}
+
+.game_form input[type=text] {
+  border: 0;
+  border-bottom: 4px solid white;
+  background: transparent;
+  text-align: center;
+  color: #BEFA21;
+}
+
+.game_form input:focus {
+  outline: 0;
+}
+
+#id_defender, #id_invader, #id_projectile {
+  width: 0.1px;
+  height: 0.1px;
+  opacity: 0;
+  overflow: hidden;
+  position: absolute;
+  z-index: -1;
+}
+
+.game_form label {
+  cursor: pointer;
+}
+
+.game_form label:focus {
+
+}
+
+#game_url {
+  visibility: hidden;
+  display: none;
+}

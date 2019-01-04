@@ -1,0 +1,22 @@
+{% extends "game/base.html" %}
+{% block content%}
+<h1> Insert Invader Here </h1>
+  <div>
+    <p>
+      Space and aliens arent your thing, but still want to play Space Invaders?
+      This is your chance to create your own version of Space Invaders with
+      anything you like!
+    </p>
+    <a class="btn btn-main" href="{% url 'create' %}" role="button" >Create my game</a>
+
+
+  </div>
+  <div>
+  <!-- {% for games in games %}
+    <h2> {{ games.title }} </h2>
+    <p> The defender is: {{ games.defender }} </p>
+    <button type="button" class="btn btn-success"> Play!</button>
+  {% endfor %}
+  -->
+</div>
+{% endblock content %}

@@ -1,0 +1,30 @@
+{% extends "game/base.html" %}
+{% block content%}
+<h1> Insert Donations Here </h1>
+  <div>
+    <p>
+      This is the first website I have ever created using django, I wanted to develop
+      something lighthearted and fun so I decided on making a tribute to the retro game.
+      The game isnt exactly the same as Space Invaders since it doesnt feature shelters (yet)
+      and the invaders dont shoot back (yet). Also there is only one level and the way points
+      are calculated is different.
+      <br>
+      <br>
+      Enjoyed the game? Consider donating to help me keep the website up and continue
+      developing new functions :)
+    </p>
+    <ul id="donatelist">
+      <li>
+        <a class="btn btn-eth" href="#" role="button" >Ethereum</a>
+      </li>
+      <li>
+        <a class="btn btn-btc" href="#" role="button" >Bitcoin</a>
+      </li>
+      <li>
+        <a class="btn btn-ppl" href="#" role="button" >Paypal</a>
+      </li>
+
+
+    </ul>
+  </div>
+{% endblock content %}

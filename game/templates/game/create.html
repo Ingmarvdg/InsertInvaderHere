@@ -1,0 +1,27 @@
+{% extends "game/base.html" %}
+{% block content%}
+  <h1> Insert Invader Here </h1>
+  <p> Select the images you want to use in your game, tip: use .png files to
+    get rid of white backgrounds.
+  </p>
+
+  <form method="POST" class="game_form" accept-charset="utf-8" enctype="multipart/form-data" >
+    {% csrf_token %}
+      <div class="inputfield">
+        {{form.invader_name }}
+      </div>
+      <div class="imagefield">
+        {{ form.defender }}
+        <label for="id_defender" class="btn btn-upload" id="defender_btn">Choose defender..</label>
+      </div>
+      <div class="imagefield">
+        {{ form.invader }}
+        <label for="id_invader" class="btn btn-upload" id="invader_btn"> Choose invader..</label>
+      </div>
+      <div class="imagefield">
+        {{ form.projectile_color }}
+      </div>
+    <button type="submit" class="save btn btn-main">Save</button>
+  </form>
+  <ul> {{form.non_field_errors}} </ul>
+{% endblock content %}
