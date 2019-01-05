@@ -1,3 +1,9 @@
+window.onload = init;
+
+  function init(){
+    window.scrollTo(0, document.body.scrollHeight || document.documentElement.scrollHeight);
+  }
+
 function copylink() {
   /* Get the text field */
   var copyText = document.getElementById('game_url').textContent;

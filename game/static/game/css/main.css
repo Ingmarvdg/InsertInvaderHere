@@ -141,6 +141,17 @@ table {
   background: white;
 }
 
+.btn-ctrl {
+  border-color: white;
+  color: white;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.btn-ctrl:hover {
+  background: white;
+}
+
 .game_form {
 }
 
@@ -219,5 +230,9 @@ table {
 
 #game_url {
   visibility: hidden;
+  display: none;
+}
+
+#touchcontrols {
   display: none;
 }

@@ -19,6 +19,7 @@ class Game {
   // define what happens when the game ends
   endgame(result) {
     gamearea.style.display = 'none';
+    touchcontrols.style.display = 'none';
     // define what happens if the player loses
     if(result == 0) {
       document.getElementById('lossview')

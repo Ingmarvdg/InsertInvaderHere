@@ -1,3 +1,10 @@
+window.onload = init;
+
+  function init(){
+    var scrollingElement = (document.scrollingElement || document.body);
+    scrollingElement.scrollTop = scrollingElement.scrollHeight;
+  }
+
 function copylink() {
   /* Get the text field */
   var copyText = document.getElementById('game_url').textContent;
@@ -11,7 +18,7 @@ function copylink() {
   document.execCommand("copy");
 
   /* Alert the copied text */
-  alert("copied the link to clipboard");
+  alert("Copied the link to clipboard.");
 }
 
 function get_add_filename(image_number) {
@@ -21,9 +28,5 @@ function get_add_filename(image_number) {
   } else if(image_number == 1){
     t = document.getElementById('invader_btn')
     t.textContent = 'Invader is selected'
-  } else if(image_number == 2){
-    t = document.getElementById('projectile_btn')
-    t.textContent = 'Projectile is selected'
   }
-  console.log(image_number)
 }

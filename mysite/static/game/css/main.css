@@ -134,7 +134,7 @@ table {
 
 .btn-copy {
   border-color: white;
-  color: red;
+  color: white;
 }
 
 .btn-copy:hover {
@@ -219,5 +219,9 @@ table {
 
 #game_url {
   visibility: hidden;
+  display: none;
+}
+
+#touchcontrols {
   display: none;
 }

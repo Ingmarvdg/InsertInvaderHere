@@ -52,6 +52,7 @@ function setup() {
   // size of playing field
   var width = gamearea.offsetWidth;
   var height = gamearea.offsetHeight;
+  var hasTouch = 'ontouchstart' in window;
 
   // calculations for commonly used variables
   var gamewidth = width-(width/10);
@@ -70,6 +71,12 @@ function setup() {
       invaders.push(new Invader(invader_img, x_location, invader_height, invader_width, invader_height, drop));
       invaders.push(new Invader(invader_img, x_location, invader_height*2.5, invader_width, invader_height, drop));
       invaders.push(new Invader(invader_img, x_location, invader_height*4, invader_width, invader_height, drop));
+  }
+
+  if(hasTouch) {
+    touchcontrols = document.getElementById("touchcontrols")
+    touchcontrols.style.display = 'block';
+    touchcontrols.scrollIntoView();
   }
 }
 
@@ -127,7 +134,6 @@ function draw() {
         // add one to kill count
         n_kills++;
         // add points to total points
-        console.log(pointmod, p_per_hit), n_edges;
         game.addpoints(p_per_hit * pointmod);
       }
     }
@@ -152,6 +158,16 @@ function draw() {
   }
 }
 
+function shoot() {
+  if(ready == true){
+    var projectile = new Projectile(projectile_color, defender.x, defender.y-defender.height);
+    projectiles.push(projectile);
+    ready = false;
+    // put the gun on cooldown
+    setTimeout(function(){ready = true}, cooldown)
+  }
+}
+
 // if the player releases a key that isnt the spacebar, stop moving.
 function keyReleased() {
   if (key != ' '){
@@ -161,12 +177,8 @@ function keyReleased() {
 
 function keyPressed() {
   // if the player presses spacebar and the gun is ready, shoot!
-  if (key === ' ' && ready == true) {
-    var projectile = new Projectile(projectile_color, defender.x, defender.y-defender.height);
-    projectiles.push(projectile);
-    ready = false;
-    // put the gun on cooldown
-    setTimeout(function(){ready = true}, cooldown)
+  if (key === ' ') {
+    shoot();
   }
   // move the defender left or right.
   if (keyCode === RIGHT_ARROW) {
