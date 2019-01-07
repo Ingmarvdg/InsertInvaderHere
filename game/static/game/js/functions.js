@@ -4,21 +4,26 @@ window.onload = init;
     window.scrollTo(0, document.body.scrollHeight || document.documentElement.scrollHeight);
   }
 
-function copylink() {
-  /* Get the text field */
-  var copyText = document.getElementById('game_url').textContent;
-  console.log(copyText);
-  console.log("ples");
-  copytext = toString(copyText);
+var copyTextareaBtn = document.querySelector('.btn-copy');
+if(copyTextareaBtn !== null) {
+  copyTextareaBtn.addEventListener('click', function(event) {
+    var link = document.getElementById('game_url');
+    var range = document.createRange();
+    range.selectNode(link);
+    window.getSelection().addRange(range);
 
-  /* Select the text field */
+    try {
+      var successful = document.execCommand('copy');
+      var msg = successful ? 'succesful' : 'unsuccesful';
+      console.log('Copying link command was ' + msg);
+    } catch(err) {
+      console.log('Copying link command was ' + msg);
+    }
+    window.getSelection().removeAllRanges();
+  })
+};
 
-  /* Copy the text inside the text field */
-  document.execCommand("copy");
 
-  /* Alert the copied text */
-  alert("Copied the link to clipboard.");
-}
 
 function get_add_filename(image_number) {
   if(image_number == 0) {

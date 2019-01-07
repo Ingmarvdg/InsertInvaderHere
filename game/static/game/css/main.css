@@ -135,6 +135,7 @@ table {
 .btn-copy {
   border-color: white;
   color: white;
+  clear: left;
 }
 
 .btn-copy:hover {
@@ -152,6 +153,16 @@ table {
   background: white;
 }
 
+.btn-endgame {
+  border-color: white;
+  color: white;
+  clear: left;
+}
+
+.btn-endgame:hover {
+  background: white;
+}
+
 .game_form {
 }
 
@@ -161,35 +172,23 @@ table {
 
 #gamearea {
   background: black;
-  height: 500px;
+  height: 600px;
   width: 600px;
-  min-width: 500px;
+  min-width: 600px;
   max-width: 600px;
 }
 
-#lossview {
-  display:none;
+#endgameview {
   margin-top: 150px;
-}
-
-#winview {
-  margin-top: 150px;
+  width: 600px;
   display:none;
 }
 
-#lossview p {
-  font-family: 'Press Start 2P', cursive;
-  color: #F7401C;
-  font-size: 2.4em;
-  margin-bottom: 10px;
+#endgametext {
+  display: inline-block;
+  white-space: nowrap;
 }
 
-#winview p {
-  font-family: 'Press Start 2P', cursive;
-  color: #BEFA21;
-  font-size: 2.4em;
-  margin-bottom: 10px;
-}
 
 .game_form {
   margin-top: 40px;
@@ -229,10 +228,10 @@ table {
 }
 
 #game_url {
-  visibility: hidden;
-  display: none;
+  color: black;
 }
 
 #touchcontrols {
   display: none;
+  margin-bottom: 50px;
 }

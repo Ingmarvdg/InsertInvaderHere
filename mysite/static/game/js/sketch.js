@@ -28,8 +28,6 @@ var bar_height = 60;
 var cooldown = 500;
 // amount of invaders per row, there are always 3 rows of invaders.
 var n_invaders = 8;
-// name of invaders
-var invader_name = "Hamburger";
 // change how long it takes to increase the point modifier by 0.01;
 var pointmod_duration = 1000;
 // amount of points received per hit

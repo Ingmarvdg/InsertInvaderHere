@@ -20,17 +20,16 @@ class Game {
   endgame(result) {
     gamearea.style.display = 'none';
     touchcontrols.style.display = 'none';
-    // define what happens if the player loses
+    var endgameview = document.getElementById('endgameview');
+    var endgametext = document.getElementById('endgametext');
+
+    endgameview.style.display = 'block';
     if(result == 0) {
-      document.getElementById('lossview')
-      lossview.style.display = 'block';
-    }
-    // define what happens if the player wins
-    else if(result == 1) {
-      document.getElementById('winview')
-      winview.style.display = 'block';
-      Math.round(this.points);
-      document.getElementById('points').textContent = this.points + " Points.";
+      endgametext.textContent = 'You lose!';
+      endgametext.style.color = color_red;
+    } else if(result == 1) {
+            endgametext.textContent = 'You Win! Your score: ' + this.points;
+      endgametext.style.color = color_neon;
     }
   }
 
